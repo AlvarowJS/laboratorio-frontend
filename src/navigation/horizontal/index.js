@@ -1,6 +1,24 @@
-import { Calendar, Check, DollarSign, Edit3, Hash, Printer, Tag, UserCheck, UserPlus, Users } from "react-feather";
+import { File, Layers, Square, UserCheck } from "react-feather";
 
 export default [
+  {
+    id: "Examen",
+    title: "Examen",
+    icon: <File size={20} />,
+    navLink: "/examen",
+  },
+  {
+    id: "Lote",
+    title: "Lote",
+    icon: <Layers size={20} />,
+    navLink: "/lote",
+  },
+  {
+    id: "Tipo",
+    title: "Tipo",
+    icon: <Square size={20} />,
+    navLink: "/tipo",
+  },
   {
     id: "Usuarios",
     title: "Usuarios",

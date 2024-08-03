@@ -45,13 +45,13 @@ const Login = () => {
 
   const submit = async (data) => {
     try {
-      const response = await bdLaboratorio.post('/v1/login', data);
+      const response = await bdLaboratorio.post('/login', data);
       const res = response.data;    
       localStorage.setItem('token', res?.api_token);
       localStorage.setItem('rol', res?.rol);      
       localStorage.setItem('name', res?.name);      
       setIsError(false)
-      navigate('/tickets')
+      navigate('/examen')
 
     }
     catch (err) {
@@ -84,7 +84,7 @@ const Login = () => {
             <img className="img_local" src={logo} alt="Logo" style={{ width: 100 }} />
 
             <CardTitle tag="h2" className="fw-bold mb-1 mt-2">
-              Bienvenido al Sistema de Boletos
+              Bienvenido al Sistema de Laboratorio
             </CardTitle>
             <CardText className="mb-2">
               Porfavor ingrese tu usuario y contraseña

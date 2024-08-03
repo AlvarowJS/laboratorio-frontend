@@ -15,6 +15,9 @@ import PublicRoute from "@components/routes/PublicRoute";
 import { isObjEmpty } from "@utils";
 import Usuario from "../../views/usuarios/Usuario";
 import bdLaboratorio from "../../api/bdLaboratorio";
+import Examen from "../../views/examen/Examen";
+import Lote from "../../views/lote/Lote";
+import Tipo from "../../views/tipos/Tipo";
 
 
 
@@ -109,6 +112,18 @@ const Routes = [
     index: true,
     element: <Navigate replace to={DefaultRoute} />,
 
+  },
+  {
+    path: "/examen",
+    element: <AuthGuard><Examen /></AuthGuard>,
+  },
+  {
+    path: "/lote",
+    element: <AuthGuard><Lote /></AuthGuard>,
+  },
+  {
+    path: "/tipo",
+    element: <AuthGuard><Tipo /></AuthGuard>,
   },
   {
     path: "/usuarios",
